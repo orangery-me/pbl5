@@ -5,7 +5,7 @@ from xuly import process_data, feature_buffer
 from tensorflow.keras.models import load_model
 from datetime import datetime
 
-cred = credentials.Certificate("demo.json")  
+cred = credentials.Certificate("smart-fitness.json")  
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://fir-2402-default-rtdb.asia-southeast1.firebasedatabase.app/'  
 })
