@@ -61,11 +61,12 @@ def prepare_data_for_lstm(buffer, sequence_length=3):
 
 def normalize_data(data):
     scaler = joblib.load('scaler.pkl')
+    print("mean :", scaler.mean_)
     data = scaler.transform(data)
     return data
 
 def process_data(data, window_size=50, overlap=0.5):
-    print("dta:", data)
+    # print('data:', data)
     session_data = data
 
     # Chuyển list of dict thành DataFrame
